@@ -14,6 +14,8 @@ public class Ball : MonoBehaviour
     public GameObject nextBall;
     private bool isPressed = false;
 
+    public string nextLevel = "Level02";
+
     void Update()
     {
         if (isPressed)
@@ -57,7 +59,7 @@ public class Ball : MonoBehaviour
         if (nextBall != null)
             nextBall.SetActive(true);
         else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(nextLevel);
 
     }
 }
